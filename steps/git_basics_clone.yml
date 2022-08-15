@@ -1,0 +1,33 @@
+id: git_basics_clone
+hints:
+- Try to find what all the users that drop in the funnel have in common
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: "You know how video games often start with an interactive tutorial, asking you to look left and right, jump, crawl, shoot your gun?"
+        delay: 1500
+      - text: "Well, our training department thinks we need our own tutorial! Now, we would never ask you to shoot someone (too much paperwork), so we’ll be using GitHub instead of guns."
+        delay: 3000
+      - text: "Let’s begin! \nPlease **open the repository** Navi invited you to (${user.repository}) **clone it** to your local machine, and **let me know** when you're done :)"
+        delay: 3900
+      - text: "Oh, right. Since this is a tutorial (ha!) I should probably tell you that you can **use any common word** that **indicates readiness**, like \"I’m ready\", \"done\", or \"I am 97.2% certain\"."
+trigger:
+  type: user_message_to_head-of-rd
+  flowNode:
+    if:
+      conditions:
+      - conditionId: is_user_message_text_ready_to_continue
+      then:
+        do:
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: "Oh, If you've never cloned a repository before, here's a helpful reference: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository"
+              delay: 1200
