@@ -13,7 +13,7 @@ startFlow:
         delay: 1500
       - text: "The first thing I need you to do is **add a `CODEOWNERS` file** that we are missing in our repository."
         delay: 2500
-      - text: "This file lets everyone know who is responsible for the code and who should be reviewing changes. Here it is: https://wilco-engine.herokuapp.com/quests/git_basics/CODEOWNERS"
+      - text: "This file lets everyone know who is responsible for the code and who should be reviewing changes. Here it is: https://engine.wilco.gg/quests/git_basics/CODEOWNERS"
         delay: 2700
       - text: "Please create **a new branch** and **add the file to the root directory** in the repository you just cloned. Then **commit the change** and **push it** to GitHub."
         delay: 4000
