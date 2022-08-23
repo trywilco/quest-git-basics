@@ -23,13 +23,13 @@ trigger:
         github_pr_opened:
           do:
           - actionId: github_pr_comment
-              params:
-                person: head-of-rd
-                message: "Reviewing this right now, let's see..."
+            params:
+              person: head-of-rd
+              message: "Reviewing this right now, let's see..."
           - actionId: bot_message
-              params:
-                person: head-of-rd
-                message: "Got your PR, going over it right now."
+            params:
+              person: head-of-rd
+              message: "Got your PR, going over it right now."
         github_pr_workflow_complete_success:
           if:
             conditions:
@@ -71,11 +71,11 @@ trigger:
               else:
                 do:
                 - actionId: bot_message
-                    params:
-                      person: head-of-rd
-                      messages:
-                      - text: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?"
-                        delay: 2000
+                  params:
+                    person: head-of-rd
+                    messages:
+                    - text: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?"
+                      delay: 2000
                 - actionId: github_pr_reject
                   params:
                     person: head-of-rd

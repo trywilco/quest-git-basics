@@ -35,7 +35,7 @@ trigger:
           params:
             person: head-of-rd
             messages:
-              - text: "Perfect execution! Well done."
+            - text: "Perfect execution! Well done."
               delay: 1500
         - actionId: finish_step
       else:
