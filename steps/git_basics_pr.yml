@@ -1,0 +1,85 @@
+id: git_basics_pr
+hints:
+- "If you're not sure how to open a Pull Request, read about it here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"
+- "Go to Github, in the PRs tab you’ll be able to open a new PR."
+- "Make sure you choose the right branches when opening the PR."
+- "Make sure you chose the right branches when opening the PR (merging from your branch to main)"
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: "You're finally ready to apply your changes to the codebase and complete this tutorial!"
+        delay: 1600
+      - text: "Go ahead and open a **GitHub PR** (pull request). **I'll review it and let you know** if all's well! When your **PR is approved**, you'll be able to **merge your branch into the main one**."
+        delay: 2700
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: "${githubPrLifecycleStatus}"
+      cases:
+        github_pr_opened:
+          do:
+          - actionId: github_pr_comment
+              params:
+                person: head-of-rd
+                message: "Reviewing this right now, let's see..."
+          - actionId: bot_message
+              params:
+                person: head-of-rd
+                message: "Got your PR, going over it right now."
+        github_pr_workflow_complete_success:
+          if:
+            conditions:
+            - conditionId: github_is_file_contains
+              params:
+                fileName: 'CODEOWNERS'
+                regex: "^\\* @vanessa-cooper$"
+            then:
+              do:
+              - actionId: bot_message
+                params:
+                  person: head-of-rd
+                  messages:
+                  - text: "Approved! Go ahead and merge this PR. Quickly now."
+                    delay: 1500
+              - actionId: github_pr_approve
+                params:
+                  person: head-of-rd
+                  message: "Approved! Go ahead and merge this PR. Quickly now."
+            else:
+              if:
+                conditions:
+                - conditionId: github_is_file_contains
+                  params:
+                    fileName: 'CODEOWNERS'
+                    regex: "carl"
+                then:
+                  do:
+                  - actionId: bot_message
+                    params:
+                      person: head-of-rd
+                      messages:
+                      - text: "Oh looks like the `CODEOWNERS` file I gave you is outdated. It has **Carl listed**, but he's... no longer with the company. Could you **remove him from the file**, but not from our hearts, and push that change?"
+                        delay: 2000
+                  - actionId: github_pr_reject
+                    params:
+                      person: head-of-rd
+                      message: "Oh looks like the `CODEOWNERS` file I gave you is outdated. It has **Carl listed**, but he's... no longer with the company. Could you **remove him from the file**, but not from our hearts, and push that change?" 
+              else:
+                do:
+                - actionId: bot_message
+                    params:
+                      person: head-of-rd
+                      messages:
+                      - text: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?"
+                        delay: 2000
+                - actionId: github_pr_reject
+                  params:
+                    person: head-of-rd
+                    message: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?" 
+        github_pr_merged:
+          do:
+          - actionId: finish_step
