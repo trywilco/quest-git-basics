@@ -36,7 +36,7 @@ trigger:
             - conditionId: github_is_file_contains
               params:
                 fileName: 'CODEOWNERS'
-                regex: "^\\* @vanessa-cooper$"
+                regex: '^\\* @vanessa-cooper$'
             then:
               do:
               - actionId: bot_message
@@ -55,7 +55,7 @@ trigger:
                 - conditionId: github_is_file_contains
                   params:
                     fileName: 'CODEOWNERS'
-                    regex: "carl"
+                    regex: 'carl'
                 then:
                   do:
                   - actionId: bot_message
