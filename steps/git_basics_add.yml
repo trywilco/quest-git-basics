@@ -1,8 +1,8 @@
 id: git_basics_add
 hints:
-- Use git branch to create a new branch and git checkout to switch branches
-- Use git add to add files and git commit to commit those changes
-- Use git push to push your changes to the remote branch
+- Use `git branch` to create a new branch and git checkout to switch branches
+- Use `git add` to add files and git commit to commit those changes
+- Use `git push` to push your changes to the remote branch
 startFlow:
   do:
   - actionId: bot_message
