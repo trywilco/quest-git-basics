@@ -29,7 +29,9 @@ trigger:
           - actionId: bot_message
             params:
               person: head-of-rd
-              message: "Got your PR, going over it right now."
+              messages: 
+              - text: "Got your PR, going over it right now."
+                delay: 100
         github_pr_workflow_complete_success:
           if:
             conditions:
