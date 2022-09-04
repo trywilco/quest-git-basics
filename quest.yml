@@ -1,5 +1,6 @@
 id: git_basics
 title: Gitting Started
+level: beginner
 description: "A wise developer once said \"When the going gets tough, the tough Git going.\" Git and GitHub are two of the most fundamental tools developers use worldwide. It's crucial to master the basic concepts to work with most modern workflows. In this quest, you'll have the chance to practice editing the codebase of your application by using some of the most common commands and actions."
 summary: "You learned how to add and edit files, commit changes, create a new branch, open a PR and merge your changes into the main branch."
 steps:
@@ -12,12 +13,13 @@ skills:
 - github
 questDependency: onboarding
 slogan: Learn how to build like the best
+solutionBranch: quest_solution/git_basics
 messages:
   questStarted:
     person: head-of-rd
     messages:
     - text: "https://i.giphy.com/media/dNvaBfoxWSowUpATQW/giphy.gif"
-      delay: 0
+      delay: 300
     - text: "Hey again!"
       delay: 1000
     - text: "First thing first, please **run the following command** on your repo: `${scriptCommand}`, and **let me know** once **you're done**."
