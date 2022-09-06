@@ -70,18 +70,18 @@ trigger:
                     params:
                       person: head-of-rd
                       message: "Oh looks like the `CODEOWNERS` file I gave you is outdated. It has **Carl listed**, but he's... no longer with the company. Could you **remove him from the file**, but not from our hearts, and push that change?" 
-              else:
-                do:
-                - actionId: bot_message
-                  params:
-                    person: head-of-rd
-                    messages:
-                    - text: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?"
-                      delay: 2000
-                - actionId: github_pr_reject
-                  params:
-                    person: head-of-rd
-                    message: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?" 
+                else:
+                  do:
+                  - actionId: bot_message
+                    params:
+                      person: head-of-rd
+                      messages:
+                      - text: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?"
+                        delay: 2000
+                  - actionId: github_pr_reject
+                    params:
+                      person: head-of-rd
+                      message: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?" 
         github_pr_merged:
           do:
           - actionId: finish_step
