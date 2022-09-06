@@ -70,6 +70,18 @@ trigger:
                     params:
                       person: head-of-rd
                       message: "Oh looks like the `CODEOWNERS` file I gave you is outdated. It has **Carl listed**, but he's... no longer with the company. Could you **remove him from the file**, but not from our hearts, and push that change?" 
+                else:
+                  do:
+                  - actionId: bot_message
+                    params:
+                      person: head-of-rd
+                      messages:
+                      - text: "Approved! Go ahead and merge this PR. Quickly now."
+                        delay: 1500
+                  - actionId: github_pr_approve
+                    params:
+                      person: head-of-rd
+                      message: "Approved! Go ahead and merge this PR. Quickly now."
               else:
                 do:
                 - actionId: bot_message
