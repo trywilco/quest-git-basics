@@ -15,7 +15,9 @@ startFlow:
         delay: 3900
       - text: "Oh, right. Since this is a tutorial (ha!) I should probably tell you that you can **use any common word** that **indicates readiness**, like \"I’m ready\", \"done\", or \"I am 97.2% certain\"."
 trigger:
-  type: user_message_to_head-of-rd
+  type: user_message
+  params:
+    person: head-of-rd
   flowNode:
     if:
       conditions:
