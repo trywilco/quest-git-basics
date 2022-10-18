@@ -7,7 +7,7 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: "You know how video games often start with an interactive tutorial, asking you to look left and right, jump, crawl, shoot your gun?"
+      - text: "Soooo... you know how video games often start with an interactive tutorial, asking you to look left and right, jump, crawl, shoot your gun?"
         delay: 1500
       - text: "Well, our training department thinks we need our own tutorial! Now, we would never ask you to shoot someone (too much paperwork), so we’ll be using GitHub instead of guns."
         delay: 3000
