@@ -1,4 +1,6 @@
 id: git_basics_pr
+learningObjectives: 
+- Opening a Pull Request 
 hints:
 - "If you're not sure how to open a Pull Request, read about it here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"
 - "Go to Github, in the PRs tab you’ll be able to open a new PR."
