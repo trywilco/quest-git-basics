@@ -1,4 +1,6 @@
 id: git_basics_clone
+learningObjectives: 
+- Cloning a Code Repository
 hints:
 - Use the `git clone` command
 startFlow:

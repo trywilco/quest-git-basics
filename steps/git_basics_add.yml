@@ -1,4 +1,6 @@
 id: git_basics_add
+learningObjectives: 
+- Adding a File to a Git Repository
 hints:
 - Use `git branch` to create a new branch and git checkout to switch branches
 - Use `git add` to add files and git commit to commit those changes
