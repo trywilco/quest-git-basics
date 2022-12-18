@@ -3,7 +3,7 @@ learningObjectives:
 - Adding a File to a Git Repository
 hints:
 - Use `git branch` to create a new branch and git checkout to switch branches
-- Use `git add` to add files and git commit to commit those changes
+- Use `git add` to add files and `git commit` to commit those changes
 - Use `git push` to push your changes to the remote branch
 startFlow:
   do:
@@ -12,15 +12,19 @@ startFlow:
       person: head-of-rd
       messages:
       - text: "Awesome. The tutorial continues! 🥁 now you can start making some changes to our codebase."
-        delay: 1500
+        delay: 800
       - text: "The first thing I need you to do is **add a `CODEOWNERS` file** that we are missing in our repository."
-        delay: 2500
+        delay: 1200
       - text: "This file lets everyone know who is responsible for the code and who should be reviewing changes. [Here it is.](https://engine.wilco.gg/quests/git_basics/CODEOWNERS)"
-        delay: 2700
-      - text: "Please create **a new branch** and **add the file to the root directory** in the repository you just cloned. Then **commit the change** and **push it** to GitHub."
-        delay: 4000
-      - text: "Also, feel free to consult GitHub’s [documentation](https://docs.github.com/) on how to do this."
+        delay: 1500
+      - text: "Of course, we don't make changes directly on the main branch. We want any changes to be pushed to main only when the development process is finished, and changes were reviewed by our team members."
+        delay: 1000
+      - text: "This helps prevent bugs and, just as importantly, makes us better programmers. I will review your changes in this tutorial!"
+        delay: 700
+      - text: "Please create **a new branch** and **add the file to the root directory** of your repository. Then **commit the change** and **push it** to GitHub."
         delay: 2000
+      - text: "Also, feel free to consult GitHub’s [documentation](https://docs.github.com/) on how to do this. You can also ask me for help if you need some guidance"
+        delay: 1200
 trigger:
   type: github_push
   flowNode:

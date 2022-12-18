@@ -12,10 +12,11 @@ startFlow:
       - text: "Soooo... you know how video games often start with an interactive tutorial, asking you to look left and right, jump, crawl, shoot your gun?"
         delay: 1500
       - text: "Well, our training department thinks we need our own tutorial! Now, we would never ask you to shoot someone (too much paperwork), so we’ll be using GitHub instead of guns."
+        delay: 2000
+      - text: "Let’s begin!\nPlease **connect to your Codespace environment**. You can also [create a new one](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}. :instruction[let me know] when you're ready :)
         delay: 3000
-      - text: "Let’s begin! \nPlease [**open the repository**](${user.repository}) Navi invited you to, **clone it** to your local machine, and **let me know** when you're done :)"
-        delay: 3900
       - text: "Oh, right. Since this is a tutorial (ha!) I should probably tell you that you can **use any common word** that **indicates readiness**, like \"I’m ready\", \"done\", or \"I am 97.2% certain\"."
+        delay: 1500
 trigger:
   type: user_message
   params:
@@ -33,5 +34,5 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: "Oh, If you've never cloned a repository before, [here's a helpful reference](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)."
+            - text: "Just let met know when you are ready."
               delay: 1200

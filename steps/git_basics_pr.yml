@@ -4,7 +4,6 @@ learningObjectives:
 hints:
 - "If you're not sure how to open a Pull Request, read about it here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"
 - "Go to Github, in the PRs tab you’ll be able to open a new PR."
-- "Make sure you choose the right branches when opening the PR."
 - "Make sure you chose the right branches when opening the PR (merging from your branch to main)"
 startFlow:
   do:
@@ -14,6 +13,8 @@ startFlow:
       messages:
       - text: "You're finally ready to apply your changes to the codebase and complete this tutorial!"
         delay: 1600
+      - text: "Like I said, all changes are reviewed before they can be merged to the main branch."
+        delay: 1000
       - text: "Go ahead and open a **GitHub PR** (pull request). **I'll review it and let you know** if all's well! When your **PR is approved**, you'll be able to **merge your branch into the main one**."
         delay: 2700
 trigger:
@@ -79,12 +80,12 @@ trigger:
                     params:
                       person: head-of-rd
                       messages:
-                      - text: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?"
+                      - text: "Seems like the `CODEOWNERS` file is missing the right content. Just remove Carl from the file and keep the rest. Could you fix that and push the changes?"
                         delay: 2000
                   - actionId: github_pr_reject
                     params:
                       person: head-of-rd
-                      message: "Seems like the `CODEOWNERS` file is missing the right content. Could you fix that and push the changes?" 
+                      message: "Seems like the `CODEOWNERS` file is missing the right content. Just remove Carl from the file and keep the rest. Could you fix that and push the changes?" 
                       messageName: file_missing
         github_pr_merged:
           do:
