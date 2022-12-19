@@ -19,7 +19,7 @@ startFlow:
         delay: 1500
       - text: "Of course, we don't make changes directly on the main branch. We want any changes to be pushed to main only when the development process is finished, and changes were reviewed by our team members."
         delay: 1000
-      - text: "This helps prevent bugs and, just as importantly, makes us better programmers. I will review your changes in this tutorial!"
+      - text: "This helps prevent bugs and, just as importantly, makes us better programmers. I will review your changes in this quest!"
         delay: 700
       - text: "Please create **a new branch** and **add the file to the root directory** of your repository. Then **commit the change** and **push it** to GitHub."
         delay: 2000
