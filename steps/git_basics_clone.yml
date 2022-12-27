@@ -13,7 +13,7 @@ startFlow:
         delay: 1500
       - text: "Well, our training department thinks we need our own tutorial! Now, we would never ask you to shoot someone (too much paperwork), so we’ll be using GitHub instead of guns."
         delay: 2000
-      - text: "Let’s begin!\nPlease **connect to your Codespace environment** (you can open it right from the Tools section here in Snack). You can also [create a new one](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId}){block=true}. :instruction[let me know] when you're ready :)"
+      - text: "Let’s begin!\nPlease **connect to your Codespace environment** (you can open it right from the Tools section here in Snack). You can also [create a new one](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId}). :instruction[let me know] when you're ready :)"
         delay: 3000
       - text: "I should probably tell you that you can **use any common word** that **indicates readiness**, like \"I’m ready\", \"done\", or \"I am 97.2% certain\"."
         delay: 1500
