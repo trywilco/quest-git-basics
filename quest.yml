@@ -11,7 +11,7 @@ duration: 0.5
 skills:
 - git
 - github
-questDependency: onboarding
+questDependency: docker_localsetup
 slogan: Learn how to build like the best
 solutionBranch: quest_solution/git_basics
 messages:
