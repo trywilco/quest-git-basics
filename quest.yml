@@ -15,20 +15,6 @@ questDependency: docker_localsetup
 slogan: Learn how to build like the best
 solutionBranch: quest_solution/git_basics
 messages:
-  questStarted:
-    person: head-of-rd
-    messages:
-    - text: "https://i.giphy.com/media/dNvaBfoxWSowUpATQW/giphy.gif"
-      delay: 300
-    - text: "Hey again!"
-      delay: 1000
-    - text: "First thing first, please **run the following command** on your repo: `${scriptCommand}`, and **let me know** once **you're done**."
-      delay: 1600
-  questStartedNotReady:
-    person: head-of-rd
-    messages:
-    - text: "Umm, having a problem? Email me at support@anythink.family, in case you need some urgent help."
-      delay: 700
   questFinished:
     person: head-of-rd
     messages:
