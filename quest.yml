@@ -20,5 +20,7 @@ messages:
     messages:
     - text: "Perfect, you've merged your first Pull Request! You now know how to work with Git and GitHub, and I know what it’s like to be a disembodied narrator! "
       delay: 1700
-    - text: "**[click here](${platform.home}) to begin** your journey of transforming Anythink’s codebase."
+    - text: "**To start your journey of transforming Anythink’s codebase - it's time to choose your assignment:**"
       delay: 2000
+      components:
+      - type: schedule_learning_time
