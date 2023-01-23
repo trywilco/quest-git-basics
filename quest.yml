@@ -13,7 +13,6 @@ skills:
 - github
 questDependency: docker_localsetup
 slogan: Learn how to build like the best
-solutionBranch: quest_solution/git_basics
 messages:
   questFinished:
     person: head-of-rd
