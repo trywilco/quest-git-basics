@@ -90,3 +90,11 @@ trigger:
         github_pr_merged:
           do:
           - actionId: finish_step
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+        - text: "In order to complete this quest, you need to open a PR and merge it into the main branch."
+          delay: 2000
