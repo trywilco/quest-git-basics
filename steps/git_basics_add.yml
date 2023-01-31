@@ -60,4 +60,4 @@ solution:
         - text: "According to the requirement you need first to create a new branch to the Git repository. You can do it by using `git switch -c <branch_name>` command."
         - text: "Then you need to add the `CODEOWNERS` file to the root directory of your repository. You can do it by using `git add <file name>` command."
         - text: "After that you need to commit the changes. You can do it by using `git commit -m <commit message>` command."
-        - text: "Finally you need to push the changes to the remote branch. You can do it by using `git push -u origin <branch_name>` command."
+        - text: "Finally you need to push the changes to the remote branch. You can do it by using `git push --set-upstream origin <branch_name>` command."

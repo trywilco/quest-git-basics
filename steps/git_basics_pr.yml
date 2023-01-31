@@ -97,4 +97,7 @@ solution:
         person: head-of-rd
         messages:
         - text: "In order to complete this quest, you need to open a PR and merge it into the main branch."
+        - text: "You can do this by clicking on the **Pull Requests** tab on the left side of the screen, and then clicking on the **New pull request** button and choosing the right side branch."
+        - text: "Or clicking the yellow pop up bar that appears when you push your changes to the remote repository **Compare & pull request**."
+        - text: "Once you've opened the PR, you can merge it by clicking on the **Merge pull request** button after it approved by the reviewer."
           delay: 2000
