@@ -11,7 +11,11 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: "Awesome. The tutorial continues! 🥁 now you can start making some changes to our codebase."
+      - text: "Soooo... you know how video games often start with an interactive tutorial, asking you to look left and right, jump, crawl, shoot your gun?"
+        delay: 1500
+      - text: "Well, our training department thinks we need our own tutorial! Now, we would never ask you to shoot someone (too much paperwork), so we’ll be using GitHub instead of guns."
+        delay: 2000
+      - text: "Now you can start making some changes to our codebase 🥁."
         delay: 800
       - text: "The first thing I need you to do is **add a `CODEOWNERS` file** that we are missing in our repository."
         delay: 1200
@@ -57,7 +61,9 @@ solution:
     params:
       person: head-of-rd
       messages:
-        - text: "According to the requirement you first need to create a new branch in your local git repository. You can do it by using `git switch -c <branch_name>` command."
-        - text: "Then you need to add the `CODEOWNERS` file to the root directory of your repository. You can do it by using `git add <file name>` command."
-        - text: "After that you need to commit the changes. You can do it by using `git commit -m <commit message>` command."
+        - text: "According to the requirement you need first to create a new branch to the Git repository. You can do it by using `git switch -c <branch_name>` command."
+        - text: "Now create the actual CODEOWNERS file under the root directory of your local Git repository."
+        - text: "After that you need to stage the file in the Git repository by using `git add <file_name>` command."
+        - text: "In any case, you can always check the status of your Git repository by using `git status` command."
+        - text: "After staging the file you need to commit the changes by using `git commit <file> -m <commit_message>` command."
         - text: "Finally you need to push the changes to the remote branch. You can do it by using `git push --set-upstream origin <branch_name>` command."

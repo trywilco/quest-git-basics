@@ -4,7 +4,6 @@ level: beginner
 description: "A wise developer once said \"When the going gets tough, the tough Git going.\" Git and GitHub are two of the most fundamental tools developers use worldwide. It's crucial to master the basic concepts to work with most modern workflows. In this quest, you'll have the chance to practice editing the codebase of your application by using some of the most common commands and actions."
 summary: "You learned how to add and edit files, commit changes, create a new branch, open a PR and merge your changes into the main branch."
 steps:
-- git_basics_clone
 - git_basics_add
 - git_basics_pr
 duration: 0.5
@@ -19,5 +18,3 @@ messages:
     messages:
     - text: "Perfect, you've merged your first Pull Request! You now know how to work with Git and GitHub, and I know what it’s like to be a disembodied narrator! "
       delay: 1700
-    - text: "**[click here](${platform.home}) to begin** your journey of transforming Anythink’s codebase."
-      delay: 2000
